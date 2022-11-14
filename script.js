@@ -107,7 +107,7 @@ document
     }
   });
 
-weather.fetchWeather("Manipal");
+weather.fetchWeather("delhi");
 
 document
   .querySelector(".search-bar")
