@@ -1,22 +1,27 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> NowWeatherHere </title>
+    <title>Weather Web App</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
   </head>
   <body>
     <!--Weather Card-->
     <div class="card">
       <div class="search">
-        <input type="text" class="search-bar" placeholder="Search" />
+        <input
+          type="text"
+          class="search-bar"
+          placeholder="Tap Here To Search"
+        />
         <button>
           <svg
             stroke="currentColor"
@@ -33,31 +38,36 @@
           </svg>
         </button>
       </div>
-      <div class="weather loading">
-        <h2 class="city">Weather here</h2>
-        <h1 class="temp">25.02°C</h1>
-        <div class="flex">
-          <img
-            src="https://openweathermap.org/img/wn/04n.png"
-            alt=""
-            class="icon"
-          />
-          <div class="description">Cloudy</div>
+      <div class="weather-loading">
+        <div class="1">
+          <h2 class="city">Weather in Delhi</h2>
+          <h1 class="temp">25.02°C</h1>
         </div>
-        <div class="humidity">Humidity: 91%</div>
-        <div class="wind">Wind speed: 63.05 km/h</div>
+
+        <div class="2">
+          <div class="flex">
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt=""
+              class="icon"
+            />
+            <div class="description">Cloudy</div>
+          </div>
+
+          <div class="humidity">Humidity: 91%</div>
+          <div class="wind">Wind speed: 63.05 km/h</div>
+        </div>
       </div>
-      
     </div>
     <!--Vanilla tilt.js Library Refer- https://micku7zu.github.io/vanilla-tilt.js/ -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
     <script>
       VanillaTilt.init(document.querySelectorAll(".card"), {
-        max: 4,
-        speed: 800,
+        max: 0,
+        speed: 1000,
         scale: 1.03,
         glare: true,
-        "max-glare": 0.5,
+        "max-glare": 0.1,
       });
     </script>
   </body>
